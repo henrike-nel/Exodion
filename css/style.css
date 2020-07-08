@@ -3,10 +3,6 @@
 @Author: Rocky Ahmed
 @URL: http://wethemez.com
 Author E-mail: rockybd1995@gmail.com
-
-This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
 ---------------------------------------------------- */
 
 /*=====================================================================
@@ -16,41 +12,9 @@ theme.
 @Developer URL: http://rocky.wethemez.com
 Author E-mail: rockybd1995@gmail.com
 
-@Default Styles
-
-Table of Content:
-01/ Variables
-02/ predefin
-03/ header
-04/ button
-05/ banner
-06/ breadcrumb
-07/ about
-08/ team
-09/ project 
-10/ price 
-11/ team 
-12/ blog 
-13/ video  
-14/ features  
-15/ career  
-16/ contact 
-17/ footer
-
-=====================================================================*/
-
-/*----------------------------------------------------*/
-
-/*font Variables*/
-
-/*Color Variables*/
-
-/*=================== fonts ====================*/
+/* Fonts */
 
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400,700,900|Roboto:300,400,500,700");
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
 
 .list {
   list-style: none;
@@ -133,8 +97,7 @@ button:focus {
   }
 }
 
-/* Main Title Area css
-============================================================================================ */
+/* Main Title Area */
 
 .main_title {
   text-align: center;
@@ -158,13 +121,6 @@ button:focus {
   color: #777777;
   margin-bottom: 0px;
 }
-
-/* End Main Title Area css
-============================================================================================ */
-
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
 
 .header_area {
   position: absolute;
@@ -398,12 +354,7 @@ button:focus {
   right: 20px;
 }
 
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-
-/* Home Banner Area css
-============================================================================================ */
+/* Home Banner Area */
 
 .home_banner_area {
   position: relative;
@@ -440,6 +391,7 @@ button:focus {
 
 .home_banner_area .banner_inner .banner_content .media .d-flex {
   padding-right: 75px;
+  align-self: center;
 }
 
 .home_banner_area .banner_inner .banner_content .media .media-body {
@@ -570,16 +522,6 @@ button:focus {
   color: #4e6877;
 }
 
-/* End Home Banner Area css
-============================================================================================ */
-
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-
-/* Latest Blog Area css
-============================================================================================ */
-
 .latest_blog_inner {
   margin-bottom: -30px;
 }
@@ -616,10 +558,7 @@ button:focus {
   color: #4e6877;
 }
 
-/* End Latest Blog Area css
-============================================================================================ */
-
-/*================= latest_blog_area css =============*/
+/* Latest Blog Area */
 
 .single-recent-blog-post {
   margin-bottom: 30px;
@@ -675,8 +614,6 @@ button:focus {
 .tags .tag_btn+.tag_btn {
   margin-left: 2px;
 }
-
-/*========= blog_categorie_area css ===========*/
 
 .blog_categorie_area {
   padding-top: 80px;
@@ -940,6 +877,15 @@ button:focus {
   margin-bottom: 0px;
 }
 
+.blog_right_sidebar .popular_post_widget .post_item .media-body h2 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 11px;
+  font-weight: 100;
+  line-height: 18px;
+  margin-bottom: 0px;
+}
+
 .blog_right_sidebar .popular_post_widget .post_item+.post_item {
   margin-top: 20px;
 }
@@ -1117,8 +1063,6 @@ button:focus {
   background-color: #4e6877;
   border-color: #eee;
 }
-
-/*============ Start Blog Single Styles  =============*/
 
 .single-post-area .social-links {
   padding-top: 10px;
@@ -1422,14 +1366,7 @@ button:focus {
   color: #777;
 }
 
-/*============ End Blog Single Styles  =============*/
-
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-
-/* Reservation Form Area css
-============================================================================================ */
+/* Reservation Form */
 
 .reservation_form_area .res_form_inner {
   max-width: 555px;
@@ -1533,10 +1470,7 @@ button:focus {
   text-align: center;
 }
 
-/* End Reservation Form Area css
-============================================================================================ */
-
-/*============== contact_area css ================*/
+/* contact_area */
 
 .mapBox {
   height: 420px;
@@ -1625,8 +1559,7 @@ button:focus {
   cursor: pointer;
 }
 
-/* Contact Success and error Area css
-============================================================================================ */
+/* Contact Success and error Area */
 
 .modal-message .modal-dialog {
   position: absolute;
@@ -1668,14 +1601,7 @@ button:focus {
   display: block;
 }
 
-/* End Contact Success and error Area css
-============================================================================================ */
-
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-
-/*============== Elements Area css ================*/
+/* Elements Area */
 
 .mb-20 {
   margin-bottom: 20px;
@@ -1725,9 +1651,7 @@ button:focus {
   color: #4e6877;
 }
 
-/*============== End Elements Area css ================*/
-
-/*==============Elements Button Area css ================*/
+/* Elements Button Area */
 
 .elements_button .title_color {
   margin-bottom: 30px;
@@ -1920,14 +1844,7 @@ button:focus {
   padding-bottom: 0px;
 }
 
-/*==============End Elements Button Area css ================*/
-
-/* =================================== */
-
-/*  Elements Page Styles
-/* =================================== */
-
-/*---------- Start Elements Page -------------*/
+/*  Elements Page Styles */
 
 .generic-banner {
   margin-top: 60px;
@@ -2040,6 +1957,13 @@ h2 {
 
 h3 {
   font-size: 24px;
+}
+
+h2.media-body {
+  font-family: "Roboto", sans-serif;
+  color: #a5a6a7;
+  font-size: 13px;
+  font-weight: 100;
 }
 
 h4 {
@@ -2180,30 +2104,6 @@ h6 {
   border: 1px solid transparent;
 }
 
-.genric-btn.success {
-  color: #fff;
-  background: #4cd3e3;
-  border: 1px solid transparent;
-}
-
-.genric-btn.success:hover {
-  color: #4cd3e3;
-  border: 1px solid #4cd3e3;
-  background: #fff;
-}
-
-.genric-btn.success-border {
-  color: #4cd3e3;
-  border: 1px solid #4cd3e3;
-  background: #fff;
-}
-
-.genric-btn.success-border:hover {
-  color: #fff;
-  background: #4cd3e3;
-  border: 1px solid transparent;
-}
-
 .genric-btn.info {
   color: #fff;
   background: #2e4252;
@@ -2220,60 +2120,6 @@ h6 {
   color: #38a4ff;
   border: 1px solid #38a4ff;
   background: #fff;
-}
-
-.genric-btn.info-border:hover {
-  color: #fff;
-  background: #38a4ff;
-  border: 1px solid transparent;
-}
-
-.genric-btn.warning {
-  color: #fff;
-  background: #f4e700;
-  border: 1px solid transparent;
-}
-
-.genric-btn.warning:hover {
-  color: #f4e700;
-  border: 1px solid #f4e700;
-  background: #fff;
-}
-
-.genric-btn.warning-border {
-  color: #f4e700;
-  border: 1px solid #f4e700;
-  background: #fff;
-}
-
-.genric-btn.warning-border:hover {
-  color: #fff;
-  background: #f4e700;
-  border: 1px solid transparent;
-}
-
-.genric-btn.danger {
-  color: #fff;
-  background: #f44a40;
-  border: 1px solid transparent;
-}
-
-.genric-btn.danger:hover {
-  color: #f44a40;
-  border: 1px solid #f44a40;
-  background: #fff;
-}
-
-.genric-btn.danger-border {
-  color: #f44a40;
-  border: 1px solid #f44a40;
-  background: #fff;
-}
-
-.genric-btn.danger-border:hover {
-  color: #fff;
-  background: #f44a40;
-  border: 1px solid transparent;
 }
 
 .genric-btn.link {
@@ -2700,62 +2546,6 @@ h6 {
   cursor: pointer;
 }
 
-.primary-switch input:checked+label:after {
-  left: 19px;
-}
-
-.primary-switch input:checked+label:before {
-  background: #f8b600;
-}
-
-.confirm-switch {
-  width: 35px;
-  height: 17px;
-  border-radius: 8.5px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.confirm-switch input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.confirm-switch input+label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.confirm-switch input+label:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border-radius: 8.5px;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
 .confirm-switch input+label:after {
   content: "";
   position: absolute;
@@ -2771,267 +2561,6 @@ h6 {
   transition: all 0.2s;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-}
-
-.confirm-switch input:checked+label:after {
-  left: 19px;
-}
-
-.confirm-switch input:checked+label:before {
-  background: #4cd3e3;
-}
-
-.primary-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.primary-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.primary-checkbox input+label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.single-defination h4 {
-  color: #222222;
-}
-
-.primary-checkbox input:checked+label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
-  border: none;
-}
-
-.confirm-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.confirm-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.confirm-checkbox input+label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.confirm-checkbox input:checked+label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
-  border: none;
-}
-
-.disabled-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.disabled-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.disabled-checkbox input+label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.disabled-checkbox input:disabled {
-  cursor: not-allowed;
-  z-index: 3;
-}
-
-.disabled-checkbox input:checked+label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
-  border: none;
-}
-
-.primary-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.primary-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.primary-radio input+label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.primary-radio input:checked+label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
-  border: none;
-}
-
-.confirm-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.confirm-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.confirm-radio input+label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.confirm-radio input:checked+label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
-  border: none;
-}
-
-.disabled-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-
-.disabled-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.disabled-radio input+label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-.disabled-radio input:disabled {
-  cursor: not-allowed;
-  z-index: 3;
-}
-
-.unordered-list {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-.ordered-list {
-  list-style: none;
-  padding: 0px;
-}
-
-.disabled-radio input:checked+label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
-  border: none;
 }
 
 .default-select {
@@ -3152,16 +2681,11 @@ h6 {
   right: 20px;
 }
 
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-
-/* Main Button Area css
-============================================================================================ */
+/* Main Button Area*/
 
 .main_btn {
   display: inline-block;
-  background-image: linear-gradient(to right, #766dff 0%, #86e8ff 48%, #766dff 100%);
+  background-color: #4e6877;
   background-size: 200% auto;
   padding: 0px 40px;
   color: #fff;
@@ -3211,7 +2735,7 @@ h6 {
 .submit_btn {
   width: auto;
   display: inline-block;
-  background: #766dff;
+  background: #4e6877;
   padding: 0px 50px;
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -3230,6 +2754,30 @@ h6 {
 .submit_btn:hover {
   background: transparent;
   color: #4e6877;
+}
+
+.cv_btn {
+  width: auto;
+  display: inline-block;
+  background: transparent;
+  color: #4e6877;
+  padding: 0px 50px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 45px;
+  border-radius: 8px;
+  outline: none !important;
+  box-shadow: none !important;
+  text-align: center;
+  border: 1px solid #4e6877;
+  cursor: pointer;
+  transition: all 300ms linear 0s;
+}
+
+.cv_btn:hover {
+  color: #fff;
+  background: #4e6877;
 }
 
 .white_bg_btn {
@@ -3275,15 +2823,7 @@ h6 {
   color: #222222;
 }
 
-/* End Main Button Area css
-============================================================================================ */
-
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-
-/* Welcome Area css
-============================================================================================ */
+/* Welcome Area */
 
 .welcome_inner .welcome_img {
   background: #eeeeee;
@@ -3385,11 +2925,9 @@ h6 {
   background-image: -ms-linear-gradient(0deg, #183444 0%, #4e6877 100%);
 }
 
-/* End Welcome Area css
-============================================================================================ */
+/* End Welcome Area */
 
-/* My Tabs Area css
-============================================================================================ */
+/* My Tabs Area */
 
 .mytabs_area {
   background-image: -moz-linear-gradient(0deg, #183444 0%, #4e6877 100%);
@@ -3418,7 +2956,7 @@ h6 {
   font-weight: 500;
   color: #fff;
   font-family: "Roboto", sans-serif;
-  border: 1px solid #9ab5f5;
+  border: 1px solid #4e6877;
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -3481,6 +3019,7 @@ h6 {
 
 .tabs_inner .tab-content .tab-pane .list li .media .d-flex {
   padding-right: 100px;
+  padding-left: 30px;
 }
 
 .tabs_inner .tab-content .tab-pane .list li .media .d-flex p {
@@ -3501,11 +3040,9 @@ h6 {
   margin-bottom: 0px;
 }
 
-/* End My Tabs Area css
-============================================================================================ */
+/* End My Tabs Area */
 
-/* Feature Area css
-============================================================================================ */
+/* Feature Area */
 
 .feature_area {
   background: #f9f9ff;
@@ -3589,11 +3126,9 @@ h6 {
   -webkit-text-fill-color: transparent;
 }
 
-/* End Feature Area css
-============================================================================================ */
+/* End Feature Area */
 
-/* Personal Profile Area css
-============================================================================================ */
+/* Personal Profile Area */
 
 .profile_area .col-lg-7 {
   vertical-align: middle;
@@ -3690,20 +3225,12 @@ h6 {
 }
 
 .personal_text .personal_social li:hover a {
-  background-image: -moz-linear-gradient(0deg, #283650 0%, #4e6877 100%);
-  background-image: -webkit-linear-gradient(0deg, #283650 0%, #4e6877 100%);
-  background-image: -ms-linear-gradient(0deg, #283650 0%, #4e6877 100%);
+  background-color: #4e6877;
 }
 
-/* End Personal Profile Area css
-============================================================================================ */
+/* End Personal Profile Area */
 
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-
-/* Gallery Area css
-============================================================================================ */
+/* Gallery Area */
 
 .isotope_fillter {
   margin-bottom: 50px;
@@ -3807,92 +3334,10 @@ h6 {
   margin-top: 80px;
 }
 
-/* End Gallery Area css
-============================================================================================ */
+/* End Gallery Area */
 
-/*---------------------------------------------------- */
 
-/*----------------------------------------------------*/
-
-/* Testimonials Area css
-============================================================================================ */
-
-.testimonials_area {
-  background: #f9f9ff;
-}
-
-.testimonials_area.testi_two {
-  background: #fff;
-}
-
-.testimonials_area.testi_two .testi_inner {
-  margin-top: -20px;
-  margin-bottom: -20px;
-}
-
-.testimonials_area.testi_two .owl-item {
-  padding: 20px 0px;
-}
-
-.testimonials_area.testi_two .testi_item {
-  background: #f9f9ff;
-  border-color: #f9f9ff;
-  transition: all 300ms linear 0s;
-}
-
-.testimonials_area.testi_two .testi_item:hover {
-  background: #fff;
-  border-color: #fff;
-  box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.1);
-}
-
-.testi_inner .col-lg-3 {
-  vertical-align: middle;
-  align-self: center;
-}
-
-.test_title h2 {
-  color: #222222;
-  font-size: 36px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.test_title p {
-  margin-bottom: 0px;
-}
-
-.testi_item {
-  border: 1px solid #eeeeee;
-  border-radius: 10px;
-  background: #fff;
-  padding: 40px 28px;
-}
-
-.testi_item p {
-  font-style: italic;
-}
-
-.testi_item h4 {
-  color: #222222;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-.testi_item a {
-  color: #ffc000;
-}
-
-/* End Testimonials Area css
-============================================================================================ */
-
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-
-/* Footer Area css
-============================================================================================ */
+/* Footer Area */
 
 .footer_area {
   background: #000;
@@ -4030,10 +3475,3 @@ h6 {
 .copy_right_text p a {
   color: #202f44;
 }
-
-/* End Footer Area css
-============================================================================================ */
-
-/*---------------------------------------------------- */
-
-/*# sourceMappingURL=style.css.map */
