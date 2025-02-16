@@ -6,21 +6,274 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,
 			shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.ico" type="image/png">
-	<title>Jan-Hendrik Basson</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+	<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+	<title>Exodion</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/line_icons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome_icon-font.css">
 	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
 	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<link rel="stylesheet" href="vendors/animate-css/animate.css">
 	<link rel="stylesheet" href="vendors/popup/magnific-popup.css">
 	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
+	<link href="css/plugins/animate.css" rel="stylesheet" type="text/css">
+
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
+	<style>
+
+@media only screen and (max-width:600px) {
+	.intro-content {
+			position:relative;
+		}
+
+		.intro-content-inner {
+			align-items: start;
+			text-align: left;
+		}
+
+		.intro-title {
+			font-size: 15px;
+			line-height: 1.2;
+			margin-bottom: 50px;
+			text-align: left;
+		}
+		.services-title {
+			font-size: 20px;
+			color: #B48954;
+			text-transform: uppercase;
+			padding-bottom: 10px;
+		}
+
+		.welcome-title {
+			font-size: 10px;
+		}
+
+		.sections-title {
+			font-size: 20px;
+		}
+    }
+
+		.intro {
+			position: relative;
+			overflow: hidden;
+			text-align: center;
+			color: white;
+		}
+
+		.bg-image {
+			background-size: cover;
+			background-position: center center;
+			position: relative;
+			z-index: 1;
+		}
+
+		.overlay-dark40 {
+			background: rgba(0, 0, 0, 0.4);
+		}
+
+		.dark-bg {
+			background-color: #00000018;
+		}
+
+		.parallax {
+			background-attachment: fixed;
+		}
+
+		.parallax-background2 {
+			background-image: url('img/karoo-mountain.jpg');
+		}
+
+		.js-fullscreen-height {
+			height: 100vh;
+		}
+
+		.intro-content {
+			position: absolute;
+			top: 40%;
+			left: 60%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+		}
+
+		.intro-content-inner {
+			max-width: 700px;
+			margin-left: 100px;
+			align-items: start;
+			text-align: left;
+		}
+
+		.intro-title {
+			font-size: 25px;
+			line-height: 1.2;
+			margin-bottom: 50px;
+			text-align: left;
+		}
+
+		.text-light {
+			color: #B48954;
+		}
+
+		.text-green {
+			color: #708671;
+		}
+
+		.text-navy {
+			color: #2B4156;
+			font-weight: lighter;
+		}
+
+		@keyframes rotate {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.services-title {
+			font-size: 20px;
+			color: #B48954;
+			text-transform: uppercase;
+			padding-bottom: 10px;
+		}
+
+		.welcome-title {
+			font-size: 50px;
+			color: whitesmoke;
+			padding-bottom: 20px;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+		}
+
+		.sections-title {
+			font-size: 30px;
+			color: whitesmoke;
+			padding-bottom: 50px;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 16px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 4px;
+			transition: background-color 0.3s;
+		}
+
+		.btn-purple-outline {
+			color: #6a1b9a;
+			border: 2px solid #6a1b9a;
+		}
+
+		.btn-lg {
+			padding: 15px 30px;
+			font-size: 18px;
+		}
+
+		.scroll-down {
+			margin-top: 30px;
+		}
+
+		.p-b-30 {
+			padding-bottom: 30px;
+		}
+
+		.content-wrapper {
+			position: relative;
+			padding-left: 30px;
+			/* Space between line and content */
+		}
+
+		.vertical-line {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1px;
+			height: 100%;
+			background-color: rgba(255, 255, 255, 0.8);
+			/* Semi-transparent white */
+		}
+
+		.nav-menu {
+			position: relative;
+			float: center;
+			display: block;
+		}
+
+		.nav-menu.active {
+			display: block;
+		}
+
+		.nav-menu ul.nav-menu-inner {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.nav-menu ul.nav-menu-inner li {
+			display: inline-block;
+			list-style: none;
+			text-align: left;
+		}
+
+		.nav-menu ul.nav-menu-inner>li>a {
+			color: rgba(255, 255, 255, 0.60);
+		}
+
+		.header-light .nav-menu ul.nav-menu-inner>li>a {
+			color: rgba(34, 34, 34, 0.6);
+		}
+
+		.nav-menu ul.nav-menu-inner li a {
+			font-family: inherit;
+			display: block;
+			font-size: 11px;
+			line-height: 1;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 1.6px;
+			transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+			-o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+			-moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+			-webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+		}
+
+		.nav-menu ul.nav-menu-inner>li>a {
+			padding: 37px 15px;
+		}
+
+		.header .nav-menu ul.nav-menu-inner>li.active a,
+		.header .nav-menu ul.nav-menu-inner>li a.active,
+		.header .nav-menu ul.nav-menu-inner>li:hover>a,
+		.header .nav-menu ul.nav-menu-inner>li>a:hover,
+		.header.header-dark .nav-menu ul.nav-menu-inner>li.active a,
+		.header.header-dark .nav-menu ul.nav-menu-inner>li a.active,
+		.header.header-dark .nav-menu ul.nav-menu-inner>li:hover>a,
+		.header.header-dark .nav-menu ul.nav-menu-inner>li>a:hover,
+		.header.header-dark.header-prepare .nav-menu ul.nav-menu-inner li a.current,
+		.header.header-dark.header-prepare .nav-menu ul.nav-menu-inner li.current a {
+			color: #fff;
+		}
+
+		.header.header-light .nav-menu ul.nav-menu-inner>li:hover>a,
+		.header.header-light .nav-menu ul.nav-menu-inner>li>a:hover,
+		.header.header-prepare .nav-menu ul.nav-menu-inner li a.current,
+		.header.header-prepare .nav-menu ul.nav-menu-inner li.current a {
+			color: #222;
+		}
+	</style>
 </head>
 
 <body>
@@ -28,17 +281,17 @@
 	<header class="header_area">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container box_1620">
+				<div class="container white_box">
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item active">
 								<a class="nav-link" href="#about">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#education-tab">Education</a>
+								<a class="nav-link" href="#vision">Our Vision</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#experience-tab">Experience</a>
+								<a class="nav-link" href="#services">Our Services</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#contact">Contact</a>
@@ -49,304 +302,163 @@
 			</nav>
 		</div>
 	</header>
-	<!-- Home Profile -->
-	<section id="about" class="home_banner_area">
-		<div class="container box_1620">
-			<div class="banner_inner d-flex align-items-center">
-				<div class="banner_content">
-					<div class="media">
-						<div class="img-fluid d-flex">
-							<img src="img/personal.jpg" alt="">
-						</div>
-						<div class="media-body">
-							<div class="personal_text">
-								<h6>Hello Everybody, i am</h6>
-								<h3>Jan-Hendrik Basson</h3>
-								<h4>Audit Trainee, Prospective CA(SA)</h4>
-								<p>
-									I am a 22-year-old accounting clerk, completing my articles at Baker
-									Tilly Greenwoords, an accounting firm in Cape Town, with the goal of
-									becoming a CA(SA).
-								</p>
-								<form method="get" action="Jan-Hendrik_CV.pdf">
-									<button class="cv_btn" type="submit">Download CV</button>
-								</form>
-								<div class="p-b-30"></div>
-								<ul class="list basic_info">
-									<li>
-										<a href="#">
-											<i class="lnr lnr-calendar-full"></i>
-											20 September, 1998
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="lnr lnr-phone-handset"></i>
-											+27 79 960 4140
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="lnr lnr-envelope"></i>
-											jhbasson75@gmail.com
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="lnr lnr-home"></i>
-											Cape Town
-										</a>
-									</li>
-								</ul>
-								<ul class="list personal_social">
-									<li>
-										<a href="https://www.facebook.com/janhendrik.basson.3">
-											<i class="fa fa-facebook"></i>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="fa fa-twitter"></i>
-										</a>
-									</li>
-									<li>
-										<a href="https://www.linkedin.com/in/jan-hendrik-basson-7218511aa/">
-											<i class="fa fa-linkedin"></i>
-										</a>
-									</li>
-								</ul>
-							</div>
+
+	<!-- Banner -->
+	<section id="intro" class="intro">
+		<div class="bg-image overlay-dark40 dark-bg parallax parallax-background2"
+			style="background-size: cover; background-position: center center;" data-background-img="img/buildings.jpg">
+			<div class="js-fullscreen-height container">
+				<div class="intro-content">
+					<div class="intro-content-inner">
+						<!-- Add this wrapper div with position relative -->
+						<div class="content-wrapper">
+							<!-- Add the vertical line -->
+							<div class="vertical-line"></div>
+
+							<h6 class="welcome-title intro-sub-title">Welcome to Exodion</h6>
+							<h1 class="intro-title">
+								<span class="text-navy">Your Partner in </span>
+								<span class="text-rotate">Financial Management, Risk Solutions, Offshore
+									Accounting</span>
+							</h1>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- About Section -->
-	<section class="welcome_area p_120">
-		<div class="container">
-			<div class="row welcome_inner">
-				<div class="col-lg-6">
-					<div class="welcome_text">
-						<h4>About Myself</h4>
-						<p>
-							I am self-motivated, determined, committed and set high standards
-							for myself and my work. I believe in hard productive work and
-							impeccable work ethics ensures success. I am naturally disciplined and
-							have good organisational and communication skills and therefore I
-							thrive in a position that commands hard work and dedication.
-						</p>
-						<p>On the right is how I rate my own skills.</p>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="tools_expert">
-						<div class="skill_main">
-							<div class="skill_item">
-								<h4>
-									Audit
-									<span class="counter">65</span>
-									%
-								</h4>
-								<div class="progress_br">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="65"
-											aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-							<div class="skill_item">
-								<h4>
-									Financial Accounting
-									<span class="counter">70</span>
-									%
-								</h4>
-								<div class="progress_br">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="70"
-											aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-							<div class="skill_item">
-								<h4>
-									Tax
-									<span class="counter">80</span>
-									%
-								</h4>
-								<div class="progress_br">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="80"
-											aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-							<div class="skill_item">
-								<h4>
-									Management Accounting
-									<span class="counter">70</span>
-									%
-								</h4>
-								<div class="progress_br">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="70"
-											aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-							<div class="skill_item">
-								<h4>
-									IFRS
-									<span class="counter">70</span>
-									%
-								</h4>
-								<div class="progress_br">
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="70"
-											aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
-	<!-- Experience/Education Tabs -->
-	<section class="mytabs_area p_120">
+
+	<section id="services" class="home_banner_area" style="padding-top: 100px; padding-bottom: 100px;">
 		<div class="container">
-			<div class="tabs_inner">
-				<ul class="nav nav-tabs" id="myTab" role="tablist">
-					<li class="nav-item">
-						<a class="nav-link active" id="experience-tab" data-toggle="tab" href="#experience" role="tab"
-							aria-controls="home" aria-selected="true">Work Experience</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="education-tab" data-toggle="tab" href="#education" role="tab"
-							aria-controls="profile" aria-selected="false">My Education</a>
-					</li>
-				</ul>
-				<div class="tab-content" id="myTabContent">
-					<div class="tab-pane fade show active" id="experience" role="tabpanel"
-						aria-labelledby="experience-tab">
-						<ul class="list">
-							<li>
-								<span></span>
-								<div class="media">
-									<div class="d-flex">
-										<p>
-											January 2017 -
-											<br>
-											December 2020
-										</p>
-									</div>
-									<div class="media-body">
-										<h4>Stellenbosch University</h4>
-										<p>Full-time student</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span></span>
-								<div class="media">
-									<div class="d-flex">
-										<p>School holidays
-											<br> 2017
-										</p>
-									</div>
-									<div class="media-body">
-										<h4>Exceed Auditors Paarl</h4>
-										<p>Vacation work/experience</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span></span>
-								<div class="media">
-									<div class="d-flex">
-										<p>January 2021 to
-											<br> present
-										</p>
-									</div>
-									<div class="media-body">
-										<h4>Baker Tilly Greenwoods</h4>
-										<p>Junior accounting clerk</p>
-										<p>Full-time Audit Trainee</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
-						<ul class="list">
-							<li>
-								<span></span>
-								<div class="media">
-									<div class="d-flex">
-										<p>
-											January 2012 -
-											<br>
-											November 2016
-										</p>
-									</div>
-									<div class="media-body">
-										<h4>High School Paarl Gymnasium</h4>
-										<h2 class="media-body">
-											Western Cape, South Africa
-										</h2>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span></span>
-								<div class="media">
-									<div class="d-flex">
-										<p>
-											January 2017 -
-											<br>
-											November 2019
-										</p>
-									</div>
-									<div class="media-body">
-										<h4>Stellenbosch University</h4>
-										<h2 class="media-body">Western Cape, South Africa</h2>
-										<p>
-											Bachelor Accounting Degree (BAcc)
-										</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span></span>
-								<div class="media">
-									<div class="d-flex">
-										<p>
-											January 2020 -
-											<br>
-											December 2020
-										</p>
-									</div>
-									<div class="media-body">
-										<h4>Stellenbosch University</h4>
-										<h2 class="media-body">Western Cape, South Africa</h2>
-										<p>
-											Bachelor of Accounting Honours Degree (BAccHons)
-										</p>
-									</div>
-								</div>
-							</li>
+			<div class="rows text-center">
+				<h6 class="sections-title intro-sub-title">Our Services</h6>
+			</div>
+
+			<!-- Tab Navigation -->
+			<ul class="nav nav-tabs justify-content-center" id="serviceTabs" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" id="accounting-tab" data-toggle="tab" href="#accounting" role="tab">
+						Offshore Accounting Services
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="risk-tab" data-toggle="tab" href="#risk" role="tab">
+						Risk Solutions
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="financial-tab" data-toggle="tab" href="#financial" role="tab">
+						Financial Management
+					</a>
+				</li>
+			</ul>
+
+			<!-- Tab Content -->
+			<div class="tab-content" id="serviceTabContent">
+				<!-- Risk Solutions -->
+				<div class="tab-pane fade" id="risk" role="tabpanel">
+					<div class="white_card">
+						<h4 class="services-title">Risk Solutions</h4>
+						<p style="color: #000000; font-weight: lighter; font-size: 15px;">Protect your business with our
+							comprehensive insurance solutions:</p>
+						<ul>
+							<li style="color: #000000;"><strong>Short-term Insurance:</strong> Property, vehicles, and
+								business operations.</li>
+							<li style="color: #000000;"><strong>Long-term Insurance:</strong> Life insurance, disability
+								cover, and income protection.</li>
+							<li style="color: #000000;"><strong>Medical Insurance:</strong> Tailored medical insurance
+								plans.</li>
 						</ul>
 					</div>
 				</div>
+
+				<!-- Financial Management -->
+				<div class="tab-pane fade" id="financial" role="tabpanel">
+					<div class="white_card">
+						<h4 class="services-title">Financial Management</h4>
+						<p style="color: #000000; font-weight: lighter; font-size: 15px;">Our financial management
+							services include:</p>
+						<ul>
+							<li style="color: #000000;"><strong>Accounting & Taxation:</strong> Compliance and financial
+								planning.</li>
+							<li style="color: #000000;"><strong>Financial Strategy & Forecasting:</strong> Strategic
+								planning and forecasting.</li>
+							<li style="color: #000000;"><strong>Cash Flow Management:</strong> Ensuring financial
+								stability.</li>
+							<li style="color: #000000;"><strong>Fractional CFO & Financial Manager Services:</strong>
+								Expert financial leadership.</li>
+							<li style="color: #000000;"><strong>Business Structuring:</strong> Tax optimization and
+								growth potential.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Offshore Accounting Services -->
+				<div class="tab-pane fade show active" id="accounting" role="tabpanel">
+					<div class="white_card">
+						<h4 class="services-title">Offshore Accounting Services</h4>
+						<p style="color: #000000; font-weight: lighter; font-size: 15px;">We provide efficient and
+							accurate accounting solutions for businesses operating in the EU, UK, and USA markets. Our
+							services include online bookkeeping, financial reporting, and advisory services.</p>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</section>
+
+
+	<!-- Vision Section -->
+	<section class="container" style="padding-bottom: 50px;">
+		<div class="row welcome_inner">
+			<div class="col-lg-6">
+				<div style="color: #000000; font-weight: lighter;">
+					<h6 style="text-align: left; color: #000; " class="sections-title">Our Vision</h6>
+					</br>
+					<p> At <strong>Exodion</strong>, we believe in delivering financial and risk solutions that empower
+						businesses to thrive. </p>
+					<p>Founded by a seasoned Chartered Accountant, Exodion is committed to offering reliable,
+						innovative, and customized services to meet the unique needs of each client.</p>
+					<p> Based in South Africa, we serve both local and international clients, providing offshore
+						accounting solutions for businesses in the EU, UK, and USA. Our expertise spans across
+						industries, ensuring that your financial needs are met with precision and care.
+					</p>
+					<p> At Exodion, we also strive to be at the forefront of technological advancement in the financial
+						industry, ensuring that our clients benefit from innovative tools, efficient processes, and
+						cutting-edge solutions.
+					</p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<!-- About Us -->
+	<section class="gradient_background p_120" id="vision">
+		<div class="container">
+			<h6 style="text-align: left;" class="sections-title">About Us</h6>
+			<p style="color: #ffffff; font-size: 15px; font-weight: lighter;">
+				At Exodion, inspired by the journey of Exodus, we believe in leading businesses to their financial
+				promised
+				land.
+				Just as the people of Israel were guided from uncertainty to prosperity, we guide our clients with
+				unwavering dedication, integrity, and excellence.
+			</p>
+			<p style="color: #ffffff; font-size: 15px; font-weight: lighter;"> Our vision is to provide transformative
+				financial and risk solutions that liberate businesses from financial challenges, empower them to thrive,
+				and
+				help them achieve their ultimate potential. We stand on principles of trust, resilience, and service,
+				ensuring that every client experiences a journey of growth, protection, and success.</p>
+		</div>
+	</section>
+
+
 	<!-- Contact Section -->
 	<section class="feature_area p_120" id="contact">
 		<div class="container">
 			<div class="main_title">
-				<h2>Contact Me</h2>
+				<h6 style="color: #000;" class="sections-title">Contact Me</h6>
 				<p>
 					I am always keen to connect. Pop me a message so that we can get in
 					touch.
@@ -357,19 +469,20 @@
 					<div class="col-lg-3">
 						<div class="contact_info">
 							<div class="info_item">
-								<i class="lnr lnr-home"></i>
+								<i class="fas fa-map-pin"></i>
 								<h6>Cape Town, Western Cape</h6>
 								<p>South Africa</p>
 							</div>
 							<div class="info_item">
-								<i class="lnr lnr-phone-handset"></i>
+								<span class="icon-left">
+									<i class="fas fa-phone"></i></span>
 								<h6>
 									<a href="#">+27 79 960 4140</a>
 								</h6>
 								<p>Mon to Fri 9am to 6 pm</p>
 							</div>
 							<div class="info_item">
-								<i class="lnr lnr-envelope"></i>
+								<i class="fas fa-envelope"></i>
 								<h6>
 									<a href="#">jhbasson75@gmail.com</a>
 								</h6>
@@ -422,8 +535,7 @@
 			reserved
 			<br>
 			<a href="https://henrikenel.co.za">
-				Developed by Henrike
-				Nel
+				Developed by Henrike Basson
 			</a>
 			<aside class="f_widget social_widget">
 				<div class="f_title">
@@ -431,19 +543,19 @@
 				</div>
 				<p>Let us be social</p>
 				<ul class="list">
-					<li>
+					<li style="color: #ffffff;">
 						<a href="https://www.facebook.com/janhendrik.basson.3">
-							<i class="fa fa-facebook"></i>
+							<i style="color: #ffffff;" class="fas fa-facebook"></i>
 						</a>
 					</li>
-					<li>
+					<li style="color: #ffffff;">
 						<a href="#">
-							<i class="fa fa-twitter"></i>
+							<i class="fas fa-twitter" style="color: #ffffff !important;"></i>
 						</a>
 					</li>
 					<li>
 						<a href="https://www.linkedin.com/in/jan-hendrik-basson-7218511aa/">
-							<i class="fa fa-linkedin"></i>
+							<i class="fas fa-linkedin"></i>
 						</a>
 					</li>
 				</ul>
@@ -465,6 +577,7 @@
 	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
 	<script src="js/mail-script.js"></script>
 	<script src="js/theme.js"></script>
+	<script src="js/jquery.simple-text-rotator.min.js" type="text/javascript"></script>
 	<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
 </body>
 

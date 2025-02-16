@@ -6,6 +6,54 @@
 
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400,700,900|Roboto:300,400,500,700");
 
+
+.lnr {
+  display: inline-block;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.05em;
+}
+
+.lnr-mustache {
+  color: #708671;
+  /* We can use "color" for setting the color
+  of the SVG because we set its "fill" to
+  "currentColor" */
+  font-size: 40px;
+  /* We can use "font-size" for changing the size
+  of the SVG because its width and height were
+  set 1em.
+  To get crisp results, use sizes that are
+  a multiple of 20; because Linearicons was
+  designed on a 20 by 20 grid. */
+}
+
+body {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #555;
+}
+
+.white_card {
+  border-radius: 12px;
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0px 20px 80px 0px rgba(153, 153, 153, 0.3);
+}
+
+.nav-tabs .nav-link {
+  color: #708671;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #708671;
+  color: white;
+}
+
 .list {
   list-style: none;
   margin: 0px;
@@ -78,7 +126,7 @@ button:focus {
 }
 
 @media (min-width: 1620px) {
-  .box_1620 {
+  .white_box {
     max-width: 1620px;
     margin: auto;
     width: 100%;
@@ -245,6 +293,7 @@ button:focus {
   font-size: 12px;
   line-height: 60px;
   display: inline-block;
+  position: relative;
   color: #222222;
   margin-left: 80px;
 }
@@ -254,7 +303,6 @@ button:focus {
 }
 
 .header_area.navbar_fixed .main_menu {
-  position: fixed;
   width: 100%;
   top: -70px;
   left: 0;
@@ -279,13 +327,11 @@ button:focus {
 .home_banner_area {
   position: relative;
   z-index: 1;
-  background-color: #4e6877;
-  background-color: #4e6877;
-  background-color: #4e6877;
+  background-color:#2B4156;
   margin-bottom: 200px;
 }
 
-.home_banner_area .box_1620 {
+.home_banner_area .white_box {
   min-height: 700px;
   border-radius: 12px;
   position: relative;
@@ -295,26 +341,26 @@ button:focus {
   box-shadow: 0px 20px 80px 0px rgba(153, 153, 153, 0.3);
 }
 
-.home_banner_area .banner_inner {
+.home_banner_area .white_banner_inner {
   position: relative;
   width: 100%;
   min-height: 700px;
   display: flex;
 }
 
-.home_banner_area .banner_inner .banner_content {
+.home_banner_area .white_banner_inner .banner_content {
   color: #222222;
   vertical-align: middle;
   align-self: center;
   text-align: left;
 }
 
-.home_banner_area .banner_inner .banner_content .media .d-flex {
+.home_banner_area .white_banner_inner .banner_content .media .d-flex {
   padding-right: 75px;
   align-self: center;
 }
 
-.home_banner_area .banner_inner .banner_content .media .media-body {
+.home_banner_area .white_banner_inner .banner_content .media .media-body {
   vertical-align: middle;
   align-self: center;
 }
@@ -334,7 +380,7 @@ button:focus {
   margin-bottom: 120px;
 }
 
-.banner_area .box_1620 {
+.banner_area .white_box {
   background: #fff;
   min-height: 360px;
   border-radius: 12px;
@@ -343,7 +389,7 @@ button:focus {
   box-shadow: 0px 20px 80px 0px rgba(153, 153, 153, 0.3);
 }
 
-.banner_area .banner_inner {
+.banner_area .white_banner_inner {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -351,7 +397,7 @@ button:focus {
   z-index: 1;
 }
 
-.banner_area .banner_inner .banner_content h2 {
+.banner_area .white_banner_inner .banner_content h2 {
   color: #222222;
   font-size: 48px;
   font-family: "Heebo", sans-serif;
@@ -359,7 +405,7 @@ button:focus {
   font-weight: bold;
 }
 
-.banner_area .banner_inner .banner_content .page_link a {
+.banner_area .white_banner_inner .banner_content .page_link a {
   font-size: 14px;
   color: #222222;
   font-family: "Roboto", sans-serif;
@@ -367,7 +413,7 @@ button:focus {
   position: relative;
 }
 
-.banner_area .banner_inner .banner_content .page_link a:before {
+.banner_area .white_banner_inner .banner_content .page_link a:before {
   content: "\e87a";
   font-family: 'Linearicons-Free';
   position: absolute;
@@ -376,15 +422,15 @@ button:focus {
   transform: translateY(-50%);
 }
 
-.banner_area .banner_inner .banner_content .page_link a:last-child {
+.banner_area .white_banner_inner .banner_content .page_link a:last-child {
   margin-right: 0px;
 }
 
-.banner_area .banner_inner .banner_content .page_link a:last-child:before {
+.banner_area .white_banner_inner .banner_content .page_link a:last-child:before {
   display: none;
 }
 
-.banner_area .banner_inner .banner_content .page_link a:hover {
+.banner_area .white_banner_inner .banner_content .page_link a:hover {
   color: #4e6877;
 }
 
@@ -2463,7 +2509,7 @@ h6 {
 
 /* My Tabs Area */
 
-.mytabs_area {
+.gradient_background {
   background-image: -moz-linear-gradient(0deg, #183444 0%, #4e6877 100%);
   background-image: -webkit-linear-gradient(0deg, #183444 0%, #4e6877 100%);
   background-image: -ms-linear-gradient(0deg, #183444 0%, #4e6877 100%);
@@ -2874,7 +2920,7 @@ h6 {
 /* Footer Area */
 
 .footer_area {
-  background: #000;
+  background:#D4C7B4;
 }
 
 .f_title {
