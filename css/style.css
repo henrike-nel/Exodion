@@ -16,7 +16,7 @@
 }
 
 .lnr-mustache {
-  color: #708671;
+  color: #8899aa;
   /* We can use "color" for setting the color
   of the SVG because we set its "fill" to
   "currentColor" */
@@ -44,13 +44,13 @@ body {
 }
 
 .nav-tabs .nav-link {
-  color: #708671;
+  color: #8899aa;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .nav-tabs .nav-link.active {
-  background-color: #708671;
+  background-color: #435765;
   color: white;
 }
 
@@ -336,7 +336,7 @@ button:focus {
 .home_banner_area {
   position: relative;
   z-index: 1;
-  background-color:#2B4156;
+  background-color:#304553;
   margin-bottom: 200px;
 }
 

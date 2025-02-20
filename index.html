@@ -34,11 +34,11 @@
 				top: 0;
 				left: 0;
 				transform: none;
-				padding: 10px 20px;
+				padding: 10px 10px;
 			}
 
 			.parallax-background2 {
-				background-image: url('img/mobile.jpg');
+				background-image: url('img/blue_mobile.jpg') !important;
 				background-attachment: scroll;
 				background-size: cover;
 				background-position: center;
@@ -48,13 +48,13 @@
 			.intro-content-inner {
 				align-items: start;
 				text-align: left;
-				margin-left: 0;
+				margin-left: 0px !important;
 				padding: 0 15px;
-				max-width: 100%;
+				max-width: 80%;
 			}
 
 			.intro-title {
-				font-size: 14px;
+				font-size: 15px !important;
 				line-height: 1.2;
 				margin-bottom: 30px;
 				text-align: left;
@@ -68,7 +68,7 @@
 			}
 
 			.welcome-title {
-				font-size: 17px;
+				font-size: 17px !important;
 				letter-spacing: 3px;
 			}
 
@@ -83,12 +83,17 @@
 			}
 
 			.content-wrapper {
-				padding-left: 15px;
+				padding-left: 10px;
 			}
 
 			.vertical-line {
 				left: 0;
-				height: 80%;
+				height: 130%;
+			}
+
+			.text-navy {
+				color: #8899aa !important;
+				font-weight: lighter;
 			}
 		}
 
@@ -140,15 +145,15 @@
 
 		.intro-content {
 			position: absolute;
-			top: 40%;
-			left: 60%;
+			top: 30%;
+			left: 50%;
 			transform: translate(-50%, -50%);
 			width: 100%;
 		}
 
 		.intro-content-inner {
 			max-width: 700px;
-			margin-left: 100px;
+			margin-left: 80px;
 			align-items: start;
 			text-align: left;
 		}
@@ -156,7 +161,7 @@
 		.intro-title {
 			font-size: 25px;
 			line-height: 1.2;
-			margin-bottom: 50px;
+			margin-bottom: 20px;
 			text-align: left;
 		}
 
@@ -166,11 +171,11 @@
 		}
 
 		.text-green {
-			color: #708671;
+			color: #8899aa;
 		}
 
 		.text-navy {
-			color: #2B4156;
+			color: #8899aa;
 			font-weight: lighter;
 		}
 
@@ -196,7 +201,7 @@
 		.welcome-title {
 			font-size: 50px;
 			color: whitesmoke;
-			padding-bottom: 20px;
+			padding-bottom: 5px;
 			text-transform: uppercase;
 			letter-spacing: 5px;
 		}
@@ -220,11 +225,6 @@
 			transition: background-color 0.3s;
 		}
 
-		.btn-purple-outline {
-			color: #6a1b9a;
-			border: 2px solid #6a1b9a;
-		}
-
 		.btn-lg {
 			padding: 15px 30px;
 			font-size: 18px;
@@ -242,7 +242,7 @@
 		/* Content Layout */
 		.content-wrapper {
 			position: relative;
-			padding-left: 30px;
+			padding-left: 20px;
 		}
 
 		.vertical-line {
@@ -352,28 +352,38 @@
 
 	<!-- Banner -->
 	<section id="intro" class="intro">
-		<div class="bg-image overlay-dark40 dark-bg parallax parallax-background2"
-			style="background-size: cover; background-position: center center;">
-			<div class="js-fullscreen-height container">
+
+		<!--Canvas Bg -->
+		
+			<!-- particles -->
+			<div id="particles-js" class="intro-media-wraper gradient_background p_120 js-fullscreen-height">
+
+			</div>
+			<!-- End particles -->
+
+				
 				<div class="intro-content">
+
+
 					<div class="intro-content-inner">
-						<!-- Add this wrapper div with position relative -->
+
 						<div class="content-wrapper">
-							<!-- Add the vertical line -->
 							<div class="vertical-line"></div>
 
-							<h6 class="welcome-title intro-sub-title">Welcome to Exodion</h6>
+							<h6 class="welcome-title">Welcome to Exodion</h6>
 							<h1 class="intro-title">
 								<span class="text-navy">Your Partner in </span>
 								<span class="text-rotate">Financial Management, Risk Solutions, Offshore
 									Accounting</span>
 							</h1>
 						</div>
-					</div>
 				</div>
 			</div>
+		
+
 		</div>
-		</div>
+		<!-- End Canvas Bg -->
+
 	</section>
 
 	<section id="services" class="home_banner_area" style="padding-top: 100px; padding-bottom: 100px;">
@@ -505,9 +515,9 @@
 	<section class="feature_area p_120" id="contact">
 		<div class="container">
 			<div class="main_title">
-				<h6 style="color: #000;" class="sections-title">Contact Me</h6>
+				<h6 style="color: #000;" class="sections-title">Contact Us</h6>
 				<p>
-					I am always keen to connect. Pop me a message so that we can get in
+					We're always keen to connect. Pop us a message so that we can get in
 					touch.
 				</p>
 			</div>
@@ -531,16 +541,16 @@
 							<div class="info_item">
 								<i class="fas fa-envelope"></i>
 								<h6>
-									<a href="#">jhbasson75@gmail.com</a>
+									<a href="#">exodionsa@gmail.com</a>
 								</h6>
-								<p>Send me a message anytime!</p>
+								<p>Send us a message anytime!</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-9">
 						<form class="gform row contact_form"
 							action="https://script.google.com/macros/s/AKfycby_kcHLEkOLO2hVJCdWEnrhcX5Gk6FujCiikDODvQ/exec"
-							method="POST" id="contactForm" data-email="jhbasson75@gmail.com" novalidate="novalidate">
+							method="POST" id="contactForm" data-email="exodionsa@gmail.com" novalidate="novalidate">
 							<div class="col-md-6">
 								<div class="form-group">
 									<input for="name" type="text" class="form-control" id="name" name="name"
@@ -581,32 +591,9 @@
 			All rights
 			reserved
 			<br>
-			<a href="https://henrikenel.co.za">
+			<a href="https://henrikebasson.com">
 				Developed by Henrike Basson
 			</a>
-			<aside class="f_widget social_widget">
-				<div class="f_title">
-					<h3>Follow Me</h3>
-				</div>
-				<p>Let us be social</p>
-				<ul class="list">
-					<li style="color: #ffffff;">
-						<a href="https://www.facebook.com/janhendrik.basson.3">
-							<i style="color: #ffffff;" class="fas fa-facebook"></i>
-						</a>
-					</li>
-					<li style="color: #ffffff;">
-						<a href="#">
-							<i class="fas fa-twitter" style="color: #ffffff !important;"></i>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/jan-hendrik-basson-7218511aa/">
-							<i class="fas fa-linkedin"></i>
-						</a>
-					</li>
-				</ul>
-			</aside>
 		</div>
 	</footer>
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -626,6 +613,11 @@
 	<script src="js/theme.js"></script>
 	<script src="js/jquery.simple-text-rotator.min.js" type="text/javascript"></script>
 	<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+	<!-- Particles JS Script -->
+	<script src="js/plugins/particles.min.js" type="text/javascript"></script>
+	<script src="js/plugins/particles_app.js" type="text/javascript"></script>
+	<!-- End Particles JS Script -->
+
 </body>
 
 </html>
