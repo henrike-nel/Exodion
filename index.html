@@ -27,47 +27,78 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<style>
+		/* Base Styles */
+		@media only screen and (max-width:800px) {
+			.intro-content {
+				position: relative;
+				top: 0;
+				left: 0;
+				transform: none;
+				padding: 60px 20px;
+			}
 
-@media only screen and (max-width:600px) {
-	.intro-content {
-			position:relative;
-		}
-		.parallax-background2 {
-			background-image: url('img/mobile.jpg');
+			.parallax-background2 {
+				background-image: url('img/mobile.jpg');
+				background-attachment: scroll;
+				background-size: cover;
+				background-position: center;
+				min-height: 100vh;
+			}
+
+			.intro-content-inner {
+				align-items: start;
+				text-align: left;
+				margin-left: 0;
+				padding: 0 15px;
+				max-width: 100%;
+			}
+
+			.intro-title {
+				font-size: 24px;
+				line-height: 1.2;
+				margin-bottom: 30px;
+				text-align: left;
+			}
+
+			.services-title {
+				font-size: 20px;
+				color: #B48954;
+				text-transform: uppercase;
+				padding-bottom: 10px;
+			}
+
+			.welcome-title {
+				font-size: 28px;
+				letter-spacing: 3px;
+			}
+
+			.sections-title {
+				font-size: 24px;
+				padding-bottom: 30px;
+			}
+
+			.js-fullscreen-height {
+				height: auto;
+				min-height: 100vh;
+			}
+
+			.content-wrapper {
+				padding-left: 15px;
+			}
+
+			.vertical-line {
+				left: 0;
+				height: 80%;
+			}
 		}
 
-		.intro-content-inner {
-			align-items: start;
-			text-align: left;
-		}
-
-		.intro-title {
-			font-size: 10px;
-			line-height: 1.2;
-			margin-bottom: 50px;
-			text-align: left;
-		}
-		.services-title {
-			font-size: 20px;
-			color: #B48954;
-			text-transform: uppercase;
-			padding-bottom: 10px;
-		}
-
-		.welcome-title {
-			font-size: 10px;
-		}
-
-		.sections-title {
-			font-size: 20px;
-		}
-	}
-
+		/* Desktop and Common Styles */
 		.intro {
 			position: relative;
 			overflow: hidden;
 			text-align: center;
 			color: white;
+			width: 100%;
 		}
 
 		.bg-image {
@@ -75,6 +106,7 @@
 			background-position: center center;
 			position: relative;
 			z-index: 1;
+			width: 100%;
 		}
 
 		.overlay-dark40 {
@@ -91,6 +123,15 @@
 
 		.parallax-background2 {
 			background-image: url('img/karoo-mountain.jpg');
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+		}
+
+		@media only screen and (min-width: 801px) {
+			.parallax-background2 {
+				background-attachment: fixed;
+			}
 		}
 
 		.js-fullscreen-height {
@@ -119,6 +160,7 @@
 			text-align: left;
 		}
 
+		/* Text Colors */
 		.text-light {
 			color: #B48954;
 		}
@@ -132,6 +174,7 @@
 			font-weight: lighter;
 		}
 
+		/* Animation */
 		@keyframes rotate {
 			0% {
 				transform: rotate(0deg);
@@ -142,6 +185,7 @@
 			}
 		}
 
+		/* Titles */
 		.services-title {
 			font-size: 20px;
 			color: #B48954;
@@ -165,6 +209,7 @@
 			letter-spacing: 5px;
 		}
 
+		/* Buttons */
 		.btn {
 			display: inline-block;
 			padding: 10px 20px;
@@ -185,6 +230,7 @@
 			font-size: 18px;
 		}
 
+		/* Layout Utilities */
 		.scroll-down {
 			margin-top: 30px;
 		}
@@ -193,10 +239,10 @@
 			padding-bottom: 30px;
 		}
 
+		/* Content Layout */
 		.content-wrapper {
 			position: relative;
 			padding-left: 30px;
-			/* Space between line and content */
 		}
 
 		.vertical-line {
@@ -206,9 +252,9 @@
 			width: 1px;
 			height: 100%;
 			background-color: rgba(255, 255, 255, 0.8);
-			/* Semi-transparent white */
 		}
 
+		/* Navigation Styles */
 		.nav-menu {
 			position: relative;
 			float: center;
@@ -248,15 +294,13 @@
 			text-transform: uppercase;
 			letter-spacing: 1.6px;
 			transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
-			-o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
-			-moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
-			-webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
 		}
 
 		.nav-menu ul.nav-menu-inner>li>a {
 			padding: 37px 15px;
 		}
 
+		/* Header Navigation States */
 		.header .nav-menu ul.nav-menu-inner>li.active a,
 		.header .nav-menu ul.nav-menu-inner>li a.active,
 		.header .nav-menu ul.nav-menu-inner>li:hover>a,
