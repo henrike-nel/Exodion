@@ -281,6 +281,15 @@ button:focus {
   }
 }
 
+@media (max-width: 800px) {
+  .header_area .navbar .nav .nav-item.submenu:hover ul {
+    visibility: visible;
+    font-size: 8px;
+    opacity: 1;
+    top: 100%;
+  }
+}
+
 .header_area .navbar .nav .nav-item.submenu:hover ul .nav-item {
   margin-top: 0px;
 }
@@ -822,7 +831,7 @@ button:focus {
 
 @media (max-width: 413px) {
   .comments-area .comment-list .single-comment h5 {
-    font-size: 12px;
+    font-size: 8px;
   }
   .comments-area .comment-list .single-comment .date {
     font-size: 11px;
