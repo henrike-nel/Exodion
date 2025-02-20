@@ -20,7 +20,7 @@ Author E-mail: rockybd1995@gmail.com
 
 Table of Content:
 01/ Variables
-02/ predefin
+02/ predefine
 03/ header
 04/ button
 05/ banner
@@ -87,7 +87,54 @@ Table of Content:
 @import "footer";
 /*---------------------------------------------------- */
 
+.container-margin {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.container-margin-t {
+    margin-top: 120px;
+}
+
+.container-margin-b {
+    margin-bottom: 120px;
+}
 
 
+.icon-left, .alt-icon-left {
+    position: absolute;
+    left: 0;
+}
 
+.alt-icon-left, .alt-icon-right {
+    top: 5px;
+}
 
+.icon-left, .icon-right {
+    top: 15px;
+}
+
+.alt-icon-color {
+    color: #2B4156 !important;
+}
+
+.icon-color {
+    background-color: #2B4156;
+    color: #fff;
+}
+
+.alt-icon-top, .alt-icon-left, .alt-icon-right {
+    color: #222;
+    display: inline-block !important;
+    font-size: 35px;
+    font-family: 'Linearicons-Free';
+    line-height: 1;
+    transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+.lnr-envelope:before {
+	content: "\e818";
+}
