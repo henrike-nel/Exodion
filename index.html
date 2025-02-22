@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="css/line_icons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/font-awesome_icon-font.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
 	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<link rel="stylesheet" href="vendors/animate-css/animate.css">
@@ -32,18 +31,19 @@
 
 			.logo-mobile {
 				display: flex;
-		  align-self: center;
-		  align-content: center;
-		  align-items: center;
-		  vertical-align: middle;
-      }
+				align-self: center;
+				align-content: center;
+				align-items: center;
+				vertical-align: middle;
+			}
 
-.logo-mobile img {
-	max-width: 80px;
-	align-items: center;
-	display: flex;
-	justify-content: center;
-}
+			.logo-mobile img {
+				max-width: 80px;
+				align-items: center;
+				display: flex;
+				justify-content: center;
+			}
+
 			.intro-content {
 				position: relative;
 				top: 0;
@@ -277,35 +277,72 @@
 			background-color: rgba(255, 255, 255, 0.8);
 		}
 
+		.mobile-nav-menu {
+			display: none;
+		}
+
+		.mobile-nav-menu.visible {
+			display: flex;
+			width: 100%;
+			transition: display 0.5s ease-in-out;
+			padding-top: 60px;
+			color: #fff;
+			line-height: 15px;
+			font-size: 15px;
+			font-weight: lighter;
+			text-align: right;
+			align-self: center;
+			background-color: #3045538a;
+			padding-bottom: 50px;
+			padding-right: 25px;
+			position: absolute;
+			right: 0;
+		}
+
+		.nav-mobile {
+			display: none;
+		}
+
+		.nav-bar-icon {
+			cursor: pointer;
+			font-size: 30px;
+			color: #fff;
+			padding: 10px;
+		}
+
+		@media only screen and (max-width: 800px) {
+			.nav-mobile {
+				display: block;
+			}
+		}
 	</style>
 </head>
 
 <body class="wow-animate">
 
-    <!-- Page Wraper -->
-  
+	<!-- Page Wraper -->
+
 	<!-- Navigation tab -->
 	<header class="header_area">
 		<div class="main_menu">
 
-			 <!-- Logo -->
-			 <!-- <div class="logo">
+			<!-- Logo -->
+			<!-- <div class="logo">
 				<a href="index.html">
 					<img class="logo-light" src="img/exodion_logo_white.png" alt="Exodion" style="display: block; padding-left: 20px; max-width: 80px;"/>
 				</a>
 			</div> -->
 			<!-- End Logo -->
-			<!-- Mobile Navbar Icon -->
-			<div class="nav-mobile nav-bar-icon">
-				<span id="mobile-nav-toggle"></span>
-			</div>
-			<!-- End Mobile Navbar Icon -->
 
 			<!-- Mobile Navbar Menu -->
-			<div id="mobile-nav-menu" class="mobile-nav-menu" style="display: none;">
-				<ul class="nav navbar-nav menu_nav ml-auto">
+			<div class="nav-mobile nav-bar-icon">
+				<span id="mobile-nav-toggle">
+				</span>
+			</div>
+			<div id="mobile-nav-menu" class="mobile-nav-menu">
+				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#about">Home</a>
+						<a class="nav-link" href="#about">About</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#vision">Our Vision</a>
@@ -320,26 +357,17 @@
 			</div>
 			<!-- End Mobile Navbar Menu -->
 			<script>
-				document.getElementById('mobile-nav-toggle').addEventListener('click', function() {
+				document.getElementById('mobile-nav-toggle').addEventListener('click', function () {
 					var menu = document.getElementById('mobile-nav-menu');
-					if (menu.style.display === 'none' || menu.style.display === '') {
-						menu.style.display = 'block';
-						menu.style.transition = 'display 0.5s ease-in-out';
-						menu.style.paddingTop = '60px';
-						menu.style.color = '#fff';
-						menu.style.lineHeight = '15px';
-						menu.style.fontSize = '15px';
-						menu.style.fontWeight = 'lighter';
-						menu.style.textAlign = 'right';
-						menu.style.alignSelf = 'center';
-						menu.style.backgroundColor = '#95abbf85';
-						menu.style.paddingBottom = '50px';
-						menu.style.paddingRight = '25px';
-						menu.style.position = 'absolute';
-						menu.style.right = '0';
-					} else {
-						menu.style.display = 'none';
-					}
+					menu.classList.toggle('visible');
+				});
+
+				// Add event listeners to each nav-link to close the menu when clicked
+				document.querySelectorAll('#mobile-nav-menu .nav-link').forEach(function (navLink) {
+					navLink.addEventListener('click', function () {
+						var menu = document.getElementById('mobile-nav-menu');
+						menu.classList.remove('visible');
+					});
 				});
 			</script>
 
@@ -350,126 +378,118 @@
 	<section id="intro" class="intro">
 
 		<!--Canvas Bg -->
-		
-			<!-- particles -->
-			<div id="particles-js" class="intro-media-wraper gradient_background p_120 js-fullscreen-height">
 
-			</div>
-			<!-- End particles -->
+		<!-- particles -->
+		<div id="particles-js" class="intro-media-wraper gradient_background p_120 js-fullscreen-height">
 
-				
-				<div class="intro-content">
+		</div>
+		<!-- End particles -->
 
 
-					<div class="intro-content-inner">
+		<div class="intro-content">
 
-						<div class="content-wrapper">
-							<div class="vertical-line"></div>
-							
-							<div style="display: flex; justify-content: center;">
-								<img class="logo-mobile" src="img/exodion_logo_white.png" alt="Exodion" style="max-width: 100px;"/>
-							</div>
 
-							<h6 class="welcome-title">
-								Welcome to Exodion</h6>
-							<h1 class="intro-title">
-								<span class="text-navy">Your Partner in </span>
-								<span class="text-rotate" style="font-weight: bold;">Financial Management, Risk Solutions, Offshore
-									Accounting</span>
-							</h1>
-						</div>
+			<div class="intro-content-inner">
+
+				<div class="content-wrapper">
+					<div class="vertical-line"></div>
+
+					<div style="display: flex; justify-content: center;">
+						<img class="logo-mobile" src="img/exodion_logo_white.png" alt="Exodion"
+							style="max-width: 100px;" />
 					</div>
+
+					<h6 class="welcome-title">
+						Welcome to Exodion</h6>
+					<h1 class="intro-title">
+						<span class="text-navy">Your Partner in </span>
+						<span class="text-rotate" style="font-weight: bold;">Financial Management, Risk Solutions,
+							Offshore
+							Accounting</span>
+					</h1>
 				</div>
 			</div>
-		
+		</div>
+		</div>
+
 
 		</div>
 		<!-- End Canvas Bg -->
 
 	</section>
 
+	<!-- Services Section -->
 	<section id="services" class="home_banner_area" style="padding-top: 100px; padding-bottom: 100px;">
 		<div class="container">
 			<div class="rows text-center">
 				<h6 class="sections-title intro-sub-title">Our Services</h6>
 			</div>
-
-			<!-- Tab Navigation -->
-			<ul class="nav nav-tabs justify-content-center" id="serviceTabs" role="tablist">
-				<li class="nav-item">
-					<a class="nav-link active" id="accounting-tab" data-toggle="tab" href="#accounting" role="tab">
-						Offshore Accounting Services
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="risk-tab" data-toggle="tab" href="#risk" role="tab">
-						Risk Solutions
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="financial-tab" data-toggle="tab" href="#financial" role="tab">
-						Financial Management
-					</a>
-				</li>
-			</ul>
-
-			<!-- Tab Content -->
-			<div class="tab-content" id="serviceTabContent">
-				<!-- Risk Solutions -->
-				<div class="tab-pane fade" id="risk" role="tabpanel">
-					<div class="white_card">
-						<h4 class="services-title">Risk Solutions</h4>
-						<p style="color: #000000; font-weight: lighter; font-size: 15px;">Protect your business with our
-							comprehensive insurance solutions:</p>
-						<ul>
-							<li style="color: #000000;"><strong>Short-term Insurance:</strong> Property, vehicles, and
-								business operations.</li>
-							<li style="color: #000000;"><strong>Long-term Insurance:</strong> Life insurance, disability
-								cover, and income protection.</li>
-							<li style="color: #000000;"><strong>Medical Insurance:</strong> Tailored medical insurance
-								plans.</li>
-						</ul>
+			<div class="row" style="padding-bottom: 50px;">
+				<!-- Toggle -->
+				<div class="col-md-8 offset-md-2">
+					<div class="toggle">
+						<div class="toggle-title">
+							<a href="javascript:void(0);" onclick="toggleContent(this)">Accounting Services</a>
+						</div>
+						<div class="toggle-content" style="display: none;">
+							<p>We provide efficient and accurate accounting solutions for businesses operating in the
+								EU, UK, and USA markets. </p>
+							<h3>Our services include:</h3>
+							<ul>
+								<li>Bookkeeping</li>
+								<li>Financial Reporting</li>
+								<li>Advisory Services</li>
+							</ul>
+						</div>
+						<div class="toggle-title">
+							<a href="javascript:void(0);" onclick="toggleContent(this)">Risk Solutions</a>
+						</div>
+						<div class="toggle-content" style="display: none;">
+							<h3>Short-term Insurance</h3>
+							<p>Property, vehicles, and business operations.</p>
+							<h3>Long-term Insurance</h3>
+							<p>Life insurance, disability cover, and income protection.</p>
+							<h3>Health Insurance</h3>
+							<p>Tailored medical insurance plans.</p>
+						</div>
+						<div class="toggle-title">
+							<a href="javascript:void(0);" onclick="toggleContent(this)">Financial Management</a>
+						</div>
+						<div class="toggle-content" style="display: none;">
+							<h3>Accounting & Taxation</h3>
+							<p>Compliance and financial planning.</p>
+							<h3>Financial Strategy & Forecasting</h3>
+							<p>Strategic planning and forecasting.</p>
+							<h3>Cash Flow Management</h3>
+							<p>Ensuring financial stability.</p>
+							<h3>Fractional CFO & Financial Manager Services</h3>
+							<p>Expert financial leadership.</p>
+							<h3>Business Structuring</h3>
+							<p>Tax optimization and growth potential.</p>
+						</div>
 					</div>
 				</div>
-
-				<!-- Financial Management -->
-				<div class="tab-pane fade" id="financial" role="tabpanel">
-					<div class="white_card">
-						<h4 class="services-title">Financial Management</h4>
-						<p style="color: #000000; font-weight: lighter; font-size: 15px;">Our financial management
-							services include:</p>
-						<ul>
-							<li style="color: #000000;"><strong>Accounting & Taxation:</strong> Compliance and financial
-								planning.</li>
-							<li style="color: #000000;"><strong>Financial Strategy & Forecasting:</strong> Strategic
-								planning and forecasting.</li>
-							<li style="color: #000000;"><strong>Cash Flow Management:</strong> Ensuring financial
-								stability.</li>
-							<li style="color: #000000;"><strong>Fractional CFO & Financial Manager Services:</strong>
-								Expert financial leadership.</li>
-							<li style="color: #000000;"><strong>Business Structuring:</strong> Tax optimization and
-								growth potential.</li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- Offshore Accounting Services -->
-				<div class="tab-pane fade show active" id="accounting" role="tabpanel">
-					<div class="white_card">
-						<h4 class="services-title">Offshore Accounting Services</h4>
-						<p style="color: #000000; font-weight: lighter; font-size: 15px;">We provide efficient and
-							accurate accounting solutions for businesses operating in the EU, UK, and USA markets. Our
-							services include online bookkeeping, financial reporting, and advisory services.</p>
-					</div>
-				</div>
-
+				<!-- End Toggle -->
 			</div>
 		</div>
 	</section>
+	<!-- End Services Section -->
+
+	<script>
+		function toggleContent(element) {
+			var content = element.parentElement.nextElementSibling;
+			if (content.style.display === "none" || content.style.display === "") {
+				content.style.display = "block";
+			} else {
+				content.style.display = "none";
+			}
+		}
+	</script>
+
 
 
 	<!-- Vision Section -->
-	<section class="container" style="padding-bottom: 50px;">
+	<section class="container" style="padding-bottom: 50px;" id="vision">
 		<div class="row welcome_inner">
 			<div class="col-lg-6">
 				<div style="color: #000000; font-weight: lighter;">
@@ -494,7 +514,7 @@
 	</section>
 
 	<!-- About Us -->
-	<section class="gradient_background p_120" id="vision">
+	<section class="gradient_background p_120" id="about">
 		<div class="container">
 			<h6 style="text-align: left;" class="sections-title">About Us</h6>
 			<p style="color: #ffffff; font-size: 15px; font-weight: lighter;">
@@ -593,25 +613,23 @@
 			All rights
 			reserved
 			<br>
-			<a href="https://henrikebasson.com">
-				Developed by Henrike Basson
+			<a href="https://foreverlikethemoon.com">
+				Developed by Foreverlikethemoon
 			</a>
 		</div>
 	</footer>
-</div>
+	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/stellar.js"></script>
 	<script src="js/plugins/jquery.easing.js" type="text/javascript"></script>
-    <script src="js/plugins/SmoothScroll.js" type="text/javascript"></script>
+	<script src="js/plugins/SmoothScroll.js" type="text/javascript"></script>
 	<script src="js/plugins/jquery.singlePageNav.min.js" type="text/javascript"></script>
 	<script src="js/plugins/jquery.appear.js" type="text/javascript"></script>
 	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
 	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
 	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
 	<script src="vendors/isotope/isotope.pkgd.min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
 	<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
