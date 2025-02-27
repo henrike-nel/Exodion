@@ -2762,7 +2762,7 @@ h6 {
   width: auto;
   display: inline-block;
   background: transparent;
-  color: #4e6877;
+  color: #394f5c;
   padding: 0px 50px;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
@@ -3047,7 +3047,7 @@ h6 {
 /* Feature Area */
 
 .feature_area {
-  background: #f9f9ff;
+  background: #30455346;
 }
 
 .feature_area.feature_tow {
@@ -3342,7 +3342,7 @@ h6 {
 /* Footer Area */
 
 .footer_area {
-  background:#D4C7B4;
+  background:#304553;
 }
 
 .f_title {

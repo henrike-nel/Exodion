@@ -93,7 +93,7 @@
 		}
 
 		.mobile-nav-menu .nav-item {
-			margin: 20px 0;
+			margin: 10px 0;
 			opacity: 0;
 			transform: translateY(20px);
 			transition: all 0.3s ease;
@@ -106,7 +106,7 @@
 
 		.mobile-nav-menu .nav-link {
 			color: white;
-			font-size: 24px;
+			font-size: 15px;
 			text-decoration: none;
 			padding: 10px 20px;
 			display: inline-block;
@@ -118,7 +118,7 @@
 			content: '';
 			position: absolute;
 			width: 0;
-			height: 2px;
+			height: 1px;
 			bottom: 0;
 			left: 50%;
 			background: #B48954;
@@ -465,7 +465,7 @@
 			text-align: right;
 			align-self: center;
 			background-color: #3045538a;
-			padding-bottom: 50px;
+			padding-bottom: 20px;
 			padding-right: 25px;
 			position: absolute;
 			right: 0;
@@ -490,8 +490,38 @@
 
 		/* Base Styles */
 		.gradient_background {
-			background: linear-gradient(135deg, #8899aa 0%, #4d5d6e 100%);
+			background: linear-gradient(135deg, #304553 0%, #4d5d6e 100%);
 		}
+
+		/* Animation Styles */
+		.fade-in-section {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			will-change: opacity, transform;
+		}
+
+		.fade-in-section.is-visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		/* Cascade effect for child elements */
+		.fade-in-section .fade-in-item {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+		}
+
+		.fade-in-section.is-visible .fade-in-item {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.fade-in-section.is-visible .fade-in-item:nth-child(1) { transition-delay: 0.1s; }
+		.fade-in-section.is-visible .fade-in-item:nth-child(2) { transition-delay: 0.2s; }
+		.fade-in-section.is-visible .fade-in-item:nth-child(3) { transition-delay: 0.3s; }
+		.fade-in-section.is-visible .fade-in-item:nth-child(4) { transition-delay: 0.4s; }
 
 		/* Button Styles */
 		.submit_btn {
@@ -695,6 +725,29 @@
 				<div class="col-md-8 offset-md-2">
 					<div class="toggle">
 						<div class="toggle-title">
+							<a href="javascript:void(0);" onclick="toggleContent(this)">Financial Management</a>
+						</div>
+						<div class="toggle-content" style="display: none;">
+							<h3>Accounting & Taxation</h3>
+							<p>Comprehensive accounting services and tax planning to keep your business compliant and financially sound.</p>
+							<h3>Financial Strategy & Forecasting</h3>
+							<p>Strategic financial planning and accurate forecasting to help you make informed business decisions.</p>
+							<h3>Business Valuations</h3>
+							<p>Reliable valuations to support business sales, mergers, acquisitions, and investment decisions.</p>
+							<h3>Cash Flow Management and Financial Planning</h3>
+							<p>Effective management of your cash flow and tailored financial plans to ensure stability and growth.</p>
+							<h3>Fractional Financial Manager services</h3>
+							<p>Expert financial management support to streamline operations and enhance performance.</p>
+							<h3>Strategic Partnering</h3>
+							<p>Collaborative partnerships to drive business growth and achieve financial goals.</p>
+							<h3>Annual financial statements</h3>
+							<p>Accurate preparation of annual financial reports to meet regulatory requirements and inform stakeholders.</p>
+							<h3>Annual compliance</h3>
+							<p>Assistance with regulatory compliance to ensure your business meets all legal and financial standards.</p>
+							<h3>Structuring</h3>
+							<p>Strategic structuring of your business to optimise tax, operational efficiency, and growth potential.</p>
+						</div>
+						<div class="toggle-title">
 							<a href="javascript:void(0);" onclick="toggleContent(this)">Accounting Services</a>
 						</div>
 						<div class="toggle-content" style="display: none;">
@@ -718,29 +771,7 @@
 							<h3>Health Insurance</h3>
 							<p>Tailored medical insurance plans.</p>
 						</div>
-						<div class="toggle-title">
-							<a href="javascript:void(0);" onclick="toggleContent(this)">Financial Management</a>
-						</div>
-						<div class="toggle-content" style="display: none;">
-							<h3>Accounting & Taxation</h3>
-							<p>Comprehensive accounting services and tax planning to keep your business compliant and financially sound.</p>
-							<h3>Financial Strategy & Forecasting</h3>
-							<p>Strategic financial planning and accurate forecasting to help you make informed business decisions.</p>
-							<h3>Business Valuations</h3>
-							<p>Reliable valuations to support business sales, mergers, acquisitions, and investment decisions.</p>
-							<h3>Cash Flow Management and Financial Planning</h3>
-							<p>Effective management of your cash flow and tailored financial plans to ensure stability and growth.</p>
-							<h3>Fractional Financial Manager services</h3>
-							<p>Expert financial management support to streamline operations and enhance performance.</p>
-							<h3>Strategic Partnering</h3>
-							<p>Collaborative partnerships to drive business growth and achieve financial goals.</p>
-							<h3>Annual financial statements</h3>
-							<p>Accurate preparation of annual financial reports to meet regulatory requirements and inform stakeholders.</p>
-							<h3>Annual compliance</h3>
-							<p>Assistance with regulatory compliance to ensure your business meets all legal and financial standards.</p>
-							<h3>Structuring</h3>
-							<p>Strategic structuring of your business to optimise tax, operational efficiency, and growth potential.</p>
-						</div>
+						
 					</div>
 				</div>
 				<!-- End Toggle -->
@@ -763,45 +794,42 @@
 
 
 	<!-- Vision Section -->
-	<section class="container" style="padding-bottom: 50px;" id="vision">
+	<section class="container fade-in-section" style="padding-bottom: 50px;" id="vision">
 		<div class="row welcome_inner">
 			<div class="col-lg-6">
 				<div style="color: #000000; font-weight: lighter;">
-					<h6 style="text-align: left; color: #000; " class="sections-title">Our Vision</h6>
+					<h6 style="text-align: left; color: #000; " class="sections-title fade-in-item">Our Vision</h6>
 					</br>
-					<p> At <strong>Exodion</strong>, we believe in delivering financial and risk solutions that empower
+					<p class="fade-in-item"> At <strong>Exodion</strong>, we believe in delivering financial and risk solutions that empower
 						businesses to thrive. </p>
-					<p>Founded by a seasoned Chartered Accountant, Exodion is committed to offering reliable,
+					<p class="fade-in-item">Founded by a seasoned Chartered Accountant, Exodion is committed to offering reliable,
 						innovative, and customized services to meet the unique needs of each client.</p>
-					<p> Based in South Africa, we serve both local and international clients, providing offshore
+					<p class="fade-in-item"> Based in South Africa, we serve both local and international clients, providing offshore
 						accounting solutions for businesses in the EU, UK, and USA. Our expertise spans across
 						industries, ensuring that your financial needs are met with precision and care.
 					</p>
-					<p> At Exodion, we also strive to be at the forefront of technological advancement in the financial
+					<p class="fade-in-item"> At Exodion, we also strive to be at the forefront of technological advancement in the financial
 						industry, ensuring that our clients benefit from innovative tools, efficient processes, and
 						cutting-edge solutions.
 					</p>
 				</div>
 			</div>
 		</div>
-		</div>
 	</section>
 
 	<!-- About Us -->
-	<section class="gradient_background p_120" id="about">
+	<section class="gradient_background p_120 fade-in-section" id="about">
 		<div class="container">
-			<h6 style="text-align: left;" class="sections-title">About Us</h6>
-			<p style="color: #ffffff; font-size: 15px; font-weight: lighter;">
+			<h6 style="text-align: left;" class="sections-title fade-in-item">About Us</h6>
+			<p style="color: #ffffff; font-size: 15px; font-weight: lighter;" class="fade-in-item">
 				At Exodion, inspired by the journey of Exodus, we believe in leading businesses to their financial
-				promised
-				land.
+				promised land.
 				Just as the people of Israel were guided from uncertainty to prosperity, we guide our clients with
 				unwavering dedication, integrity, and excellence.
 			</p>
-			<p style="color: #ffffff; font-size: 15px; font-weight: lighter;"> Our vision is to provide transformative
+			<p style="color: #ffffff; font-size: 15px; font-weight: lighter;" class="fade-in-item"> Our vision is to provide transformative
 				financial and risk solutions that liberate businesses from financial challenges, empower them to thrive,
-				and
-				help them achieve their ultimate potential. We stand on principles of trust, resilience, and service,
+				and help them achieve their ultimate potential. We stand on principles of trust, resilience, and service,
 				ensuring that every client experiences a journey of growth, protection, and success.</p>
 		</div>
 	</section>
@@ -883,13 +911,7 @@
 	</section>
 	<!-- Footer + Copyright section -->
 	<footer class="footer_area p_120">
-		<div class="container">
-			Copyright &copy;
-			<br>
-			<script>document.write(new Date().getFullYear());</script>
-			All rights
-			reserved
-			<br>
+		<div class="container" style="color: #ffffff;font-weight: lighter; font-size: 13px; text-align: center;">
 			<a href="https://foreverlikethemoon.com">
 				Developed by Foreverlikethemoon
 			</a>
@@ -919,6 +941,32 @@
 	<script src="js/plugins/particles.min.js" type="text/javascript"></script>
 	<script src="js/plugins/particles_app.js" type="text/javascript"></script>
 	<!-- End Particles JS Script -->
+
+	<!-- Animation Observer Script -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const observerOptions = {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.15
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible');
+						// Once the animation is triggered, we can stop observing this element
+						observer.unobserve(entry.target);
+					}
+				});
+			}, observerOptions);
+
+			// Observe all sections with the fade-in-section class
+			document.querySelectorAll('.fade-in-section').forEach((section) => {
+				observer.observe(section);
+			});
+		});
+	</script>
 
 </body>
 
