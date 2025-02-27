@@ -25,7 +25,179 @@
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			overflow-x: hidden;
+		}
+
+		/* Improved Mobile Navigation */
+		.nav-mobile {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 1000;
+			display: none;
+		}
+
+		.nav-bar-icon {
+			width: 40px;
+			height: 40px;
+			background: rgba(136, 153, 170, 0.2);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+
+		.nav-bar-icon:hover {
+			background: rgba(136, 153, 170, 0.3);
+		}
+
+		.mobile-nav-menu {
+			position: fixed;
+			top: 0;
+			right: -100%;
+			width: 100%;
+			height: 100vh;
+			background: rgba(48, 69, 83, 0.98);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			z-index: 999;
+			transition: right 0.3s ease-in-out;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.mobile-nav-menu.visible {
+			right: 0;
+		}
+
+		.mobile-nav-menu ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			text-align: center;
+		}
+
+		.mobile-nav-menu .nav-item {
+			margin: 20px 0;
+			opacity: 0;
+			transform: translateY(20px);
+			transition: all 0.3s ease;
+		}
+
+		.mobile-nav-menu.visible .nav-item {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.mobile-nav-menu .nav-link {
+			color: white;
+			font-size: 24px;
+			text-decoration: none;
+			padding: 10px 20px;
+			display: inline-block;
+			position: relative;
+			transition: color 0.3s ease;
+		}
+
+		.mobile-nav-menu .nav-link:after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 2px;
+			bottom: 0;
+			left: 50%;
+			background: #B48954;
+			transition: all 0.3s ease;
+		}
+
+		.mobile-nav-menu .nav-link:hover {
+			color: #B48954;
+		}
+
+		.mobile-nav-menu .nav-link:hover:after {
+			width: 100%;
+			left: 0;
+		}
+
+		.mobile-menu-close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 40px;
+			height: 40px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+
+		.mobile-menu-close:hover {
+			background: rgba(255, 255, 255, 0.2);
+		}
+
+		/* Mobile Responsive Improvements */
+		@media only screen and (max-width: 800px) {
+			.nav-mobile {
+				display: block;
+			}
+
+			.intro-content {
+				padding: 20px;
+			}
+
+			.intro-content-inner {
+				width: 100%;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.welcome-title {
+				font-size: 28px;
+				margin-bottom: 15px;
+				text-align: center;
+			}
+
+			.intro-title {
+				font-size: 20px;
+				line-height: 1.4;
+				text-align: center;
+			}
+
+			.sections-title {
+				font-size: 24px;
+				padding: 20px 0;
+				text-align: center;
+			}
+
+			.container {
+				padding: 0 20px;
+			}
+
+			/* Delay each nav item animation */
+			.mobile-nav-menu .nav-item:nth-child(1) { transition-delay: 0.1s; }
+			.mobile-nav-menu .nav-item:nth-child(2) { transition-delay: 0.2s; }
+			.mobile-nav-menu .nav-item:nth-child(3) { transition-delay: 0.3s; }
+			.mobile-nav-menu .nav-item:nth-child(4) { transition-delay: 0.4s; }
+		}
+
 		/* Base Styles */
 		@media only screen and (max-width:800px) {
 
@@ -109,7 +281,7 @@
 			}
 
 			.text-navy {
-				color: #8899aa !important;
+				color: #a9b9c8 !important;
 				font-weight: lighter !important;
 				text-align: center !important;
 			}
@@ -195,7 +367,7 @@
 		}
 
 		.text-navy {
-			color: #8899aa;
+			color: #a9b9c8;
 			font-weight: lighter;
 			padding-bottom: 10px;
 		}
@@ -315,6 +487,48 @@
 				display: block;
 			}
 		}
+
+		/* Base Styles */
+		.gradient_background {
+			background: linear-gradient(135deg, #8899aa 0%, #4d5d6e 100%);
+		}
+
+		/* Button Styles */
+		.submit_btn {
+			background: #B48954;
+			color: white;
+			border: none;
+			transition: background 0.3s ease;
+		}
+
+		.submit_btn:hover {
+			background: #8899aa;
+			color: white;
+		}
+
+		/* Toggle Styles */
+		.toggle-title {
+			border-bottom: 1px solid #8899aa;
+			padding: 15px 0;
+		}
+
+		.toggle-title a {
+			color: #8899aa;
+			text-decoration: none;
+			font-weight: 500;
+			display: block;
+			position: relative;
+		}
+
+		.toggle-title a:hover {
+			color: #B48954;
+		}
+
+		.toggle-content {
+			padding: 15px;
+			background: rgba(136, 153, 170, 0.1);
+			margin-bottom: 10px;
+		}
 	</style>
 </head>
 
@@ -357,16 +571,70 @@
 			</div>
 			<!-- End Mobile Navbar Menu -->
 			<script>
-				document.getElementById('mobile-nav-toggle').addEventListener('click', function () {
-					var menu = document.getElementById('mobile-nav-menu');
-					menu.classList.toggle('visible');
-				});
+				// Improved mobile menu functionality
+				document.addEventListener('DOMContentLoaded', function() {
+					const mobileToggle = document.getElementById('mobile-nav-toggle');
+					const mobileMenu = document.getElementById('mobile-nav-menu');
+					const body = document.body;
 
-				// Add event listeners to each nav-link to close the menu when clicked
-				document.querySelectorAll('#mobile-nav-menu .nav-link').forEach(function (navLink) {
-					navLink.addEventListener('click', function () {
-						var menu = document.getElementById('mobile-nav-menu');
-						menu.classList.remove('visible');
+					function toggleMenu() {
+						mobileMenu.classList.toggle('visible');
+						body.style.overflow = mobileMenu.classList.contains('visible') ? 'hidden' : '';
+					}
+
+					function closeMenu() {
+						mobileMenu.classList.remove('visible');
+						body.style.overflow = '';
+					}
+
+					mobileToggle.addEventListener('click', function(e) {
+						e.stopPropagation();
+						toggleMenu();
+					});
+
+					// Close menu when clicking a link
+					document.querySelectorAll('.mobile-nav-menu .nav-link').forEach(link => {
+						link.addEventListener('click', function(e) {
+							e.preventDefault();
+							const target = document.querySelector(this.getAttribute('href'));
+							closeMenu();
+							setTimeout(() => {
+								target.scrollIntoView({
+									behavior: 'smooth',
+									block: 'start'
+								});
+							}, 300);
+						});
+					});
+
+					// Close menu when clicking outside
+					document.addEventListener('click', function(e) {
+						if (mobileMenu.classList.contains('visible') && 
+							!mobileMenu.contains(e.target) && 
+							!mobileToggle.contains(e.target)) {
+							closeMenu();
+						}
+					});
+
+					// Prevent clicks inside menu from closing it
+					mobileMenu.addEventListener('click', function(e) {
+						e.stopPropagation();
+					});
+
+					// Handle smooth scrolling for all anchor links
+					document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+						anchor.addEventListener('click', function (e) {
+							if (!this.closest('.mobile-nav-menu')) {
+								e.preventDefault();
+								const target = document.querySelector(this.getAttribute('href'));
+								if (target) {
+									target.scrollIntoView({
+										behavior: 'smooth',
+										block: 'start'
+									});
+								}
+							}
+						});
 					});
 				});
 			</script>
@@ -411,8 +679,6 @@
 			</div>
 		</div>
 		</div>
-
-
 		</div>
 		<!-- End Canvas Bg -->
 
@@ -457,15 +723,23 @@
 						</div>
 						<div class="toggle-content" style="display: none;">
 							<h3>Accounting & Taxation</h3>
-							<p>Compliance and financial planning.</p>
+							<p>Comprehensive accounting services and tax planning to keep your business compliant and financially sound.</p>
 							<h3>Financial Strategy & Forecasting</h3>
-							<p>Strategic planning and forecasting.</p>
-							<h3>Cash Flow Management</h3>
-							<p>Ensuring financial stability.</p>
-							<h3>Fractional CFO & Financial Manager Services</h3>
-							<p>Expert financial leadership.</p>
-							<h3>Business Structuring</h3>
-							<p>Tax optimization and growth potential.</p>
+							<p>Strategic financial planning and accurate forecasting to help you make informed business decisions.</p>
+							<h3>Business Valuations</h3>
+							<p>Reliable valuations to support business sales, mergers, acquisitions, and investment decisions.</p>
+							<h3>Cash Flow Management and Financial Planning</h3>
+							<p>Effective management of your cash flow and tailored financial plans to ensure stability and growth.</p>
+							<h3>Fractional Financial Manager services</h3>
+							<p>Expert financial management support to streamline operations and enhance performance.</p>
+							<h3>Strategic Partnering</h3>
+							<p>Collaborative partnerships to drive business growth and achieve financial goals.</p>
+							<h3>Annual financial statements</h3>
+							<p>Accurate preparation of annual financial reports to meet regulatory requirements and inform stakeholders.</p>
+							<h3>Annual compliance</h3>
+							<p>Assistance with regulatory compliance to ensure your business meets all legal and financial standards.</p>
+							<h3>Structuring</h3>
+							<p>Strategic structuring of your business to optimise tax, operational efficiency, and growth potential.</p>
 						</div>
 					</div>
 				</div>
@@ -556,48 +830,51 @@
 								<span class="icon-left">
 									<i class="fas fa-phone"></i></span>
 								<h6>
-									<a href="#">+27 79 960 4140</a>
+									<a href="https://wa.me/27799604140?text=Hello!
+									">+27 79 960 4140</a>
 								</h6>
 								<p>Mon to Fri 9am to 6 pm</p>
 							</div>
 							<div class="info_item">
 								<i class="fas fa-envelope"></i>
 								<h6>
-									<a href="#">exodionsa@gmail.com</a>
-								</h6>
+									<a href="mailto:exodionsa@gmail.com">exodionsa@gmail.com</a> 
+								</h6> 
+
 								<p>Send us a message anytime!</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-9">
-						<form class="gform row contact_form"
-							action="https://script.google.com/macros/s/AKfycby_kcHLEkOLO2hVJCdWEnrhcX5Gk6FujCiikDODvQ/exec"
-							method="POST" id="contactForm" data-email="exodionsa@gmail.com" novalidate="novalidate">
+						<form class="gform row contact_form" 
+							action="https://script.google.com/macros/s/AKfycbzoEorXsqgZql3OubGRlYfO_gRN-E6biTnFXSEeW3GkK83sImeKTNiFZzUi-yksFm3HQA/exec"
+							method="POST" 
+							id="contactForm" 
+							data-email="exodionsa@gmail.com">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input for="name" type="text" class="form-control" id="name" name="name"
-										placeholder="Enter your name">
+									<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
 								</div>
 								<div class="form-group">
-									<input for="email" type="email" class="form-control" id="email" name="email"
-										placeholder="Enter email address">
+									<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required>
 								</div>
 								<div class="form-group">
-									<input for="subject" type="text" class="form-control" id="subject" name="subject"
-										placeholder="Enter Subject">
+									<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" required>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<textarea for="message" class="form-control" name="message" id="message" rows="1"
-										placeholder="Enter Message"></textarea>
+									<textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message" required></textarea>
 								</div>
 							</div>
 							<div class="col-md-12 text-right">
-								<button type="submit" value="submit" class="btn submit_btn">
-									Send
-									Message
-								</button>
+								<button type="submit" class="btn submit_btn">Send Message</button>
+							</div>
+							<div class="thankyou_message" style="display:none;">
+								<div class="alert alert-success">
+									<h4>Thanks for contacting us!</h4>
+									<p>We will get back to you soon!</p>
+								</div>
 							</div>
 						</form>
 					</div>

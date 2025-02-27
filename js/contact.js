@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    
+    // Commented out since we're using Google Sheets form handler instead
+    /*
     (function($) {
         "use strict";
 
@@ -82,4 +83,5 @@ $(document).ready(function(){
     })
         
  })(jQuery)
+ */
 })

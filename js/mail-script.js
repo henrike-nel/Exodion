@@ -1,3 +1,5 @@
+// Commented out since we're using Google Sheets form handler instead
+/*
     // -------   Mail Send ajax
 
      $(document).ready(function() {
@@ -29,3 +31,4 @@
             });
         });
     });
+*/
